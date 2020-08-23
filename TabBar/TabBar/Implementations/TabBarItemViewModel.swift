@@ -9,9 +9,23 @@
 import UIKit
 
 public struct TabBarItemViewModel: BaseViewModel {
-    public var id = UUID()
+    public var id = String()
     
     let title: String?
     let image: UIImage?
+    
+    public init(id: String,
+                title: String? = nil,
+                image: UIImage? = nil) {
+        
+        self.id = id
+        
+        self.title = title
+        self.image = image
+        
+        if title == nil && image == nil {
+            fatalError("title and image both can not be nil")
+        }
+    }
     
 }
