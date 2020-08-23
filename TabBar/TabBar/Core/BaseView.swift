@@ -6,17 +6,49 @@
 //  Copyright © 2020 Manish. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-public protocol BaseView: DesignableView {
+public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
     
-    associatedtype DATA: BaseViewModel
-    var data: DATA { get set }
+    var data: DATA {
+        didSet {
+            self.initialize()
+        }
+    }
     
-    func style(_ style: Stylable) -> Self
+    init(data: DATA) {
+        self.data = data
+        
+        super.init(frame: .zero)
+        
+        self.initialize()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func initialize() {
+        self.setupViews()
+        self.setupData()
+    }
     
 }
 
+// MARK: - Setups
+extension BaseView {
+    
+    func setupViews() {
+        
+    }
+    
+    func setupData() {
+        
+    }
+    
+}
+
+// MARK: - Style
 extension BaseView {
     
     func style(_ style: Stylable) -> Self {
