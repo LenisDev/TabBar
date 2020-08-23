@@ -15,16 +15,16 @@ public extension CALayer {
         let border = CALayer()
 
         switch edge {
-        case UIRectEdge.top:
+        case .top:
             border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: width)
             break
-        case UIRectEdge.bottom:
+        case .bottom:
             border.frame = CGRect(x: 0, y: self.frame.height - width, width: self.frame.width, height: width)
             break
-        case UIRectEdge.left:
+        case .left:
             border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.height)
             break
-        case UIRectEdge.right:
+        case .right:
             border.frame = CGRect(x: self.frame.width - width, y: 0, width: width, height: self.frame.height)
             break
         default:
