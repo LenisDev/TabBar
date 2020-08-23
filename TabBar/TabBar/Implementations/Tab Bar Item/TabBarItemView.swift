@@ -8,6 +8,8 @@
 
 import UIKit
 
+public typealias SelectedTabItem = (TabBarItemViewModel) -> Void
+
 public class TabBarItemView: BaseView<TabBarItemViewModel> {
     
     private(set) lazy var titleLbl = UILabel()
@@ -18,10 +20,10 @@ public class TabBarItemView: BaseView<TabBarItemViewModel> {
                                                      axis: .horizontal,
                                                      distribution: .fillProportionally)
     
-    private(set) var onTap: (TabBarItemViewModel) -> Void
+    private(set) var onTap: SelectedTabItem
     
     public init(data: TabBarItemViewModel,
-         onTap: @escaping (TabBarItemViewModel) -> Void) {
+                onTap: @escaping SelectedTabItem) {
         
         self.onTap = onTap
         super.init(data: data)

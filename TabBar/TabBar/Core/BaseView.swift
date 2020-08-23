@@ -38,7 +38,7 @@ public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
         self.setupData()
     }
     
-    func setupViews() {        
+    func setupViews() {
         self.rootView.subviews.forEach { $0.removeFromSuperview() }
         self.rootView.sameSize(as: self)
     }
@@ -52,6 +52,7 @@ public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
 // MARK: - Style
 extension BaseView {
     
+    @discardableResult
     func style(_ style: Stylable) -> Self {
         
         // bg color
