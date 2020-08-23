@@ -18,6 +18,8 @@
 		133292DF24F29BFB00343AE4 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292DE24F29BFB00343AE4 /* BaseViewModel.swift */; };
 		133292E224F2A17800343AE4 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E124F2A17800343AE4 /* TabBarItemView.swift */; };
 		133292E424F2A18500343AE4 /* TabBarItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E324F2A18500343AE4 /* TabBarItemViewModel.swift */; };
+		133292E624F2B30200343AE4 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E524F2B30200343AE4 /* UIView+Constraints.swift */; };
+		133292E824F2B44100343AE4 /* Number+UIEdgeInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E724F2B44100343AE4 /* Number+UIEdgeInset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		133292DE24F29BFB00343AE4 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		133292E124F2A17800343AE4 /* TabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
 		133292E324F2A18500343AE4 /* TabBarItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewModel.swift; sourceTree = "<group>"; };
+		133292E524F2B30200343AE4 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		133292E724F2B44100343AE4 /* Number+UIEdgeInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+UIEdgeInset.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 			children = (
 				133292D824F288C400343AE4 /* CALayer+Border.swift */,
 				133292DA24F28A8B00343AE4 /* UIView+Radius.swift */,
+				133292E524F2B30200343AE4 /* UIView+Constraints.swift */,
+				133292E724F2B44100343AE4 /* Number+UIEdgeInset.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -253,8 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				133292D324F285E200343AE4 /* Stylable.swift in Sources */,
+				133292E824F2B44100343AE4 /* Number+UIEdgeInset.swift in Sources */,
 				133292E224F2A17800343AE4 /* TabBarItemView.swift in Sources */,
 				133292D924F288C400343AE4 /* CALayer+Border.swift in Sources */,
+				133292E624F2B30200343AE4 /* UIView+Constraints.swift in Sources */,
 				133292E424F2A18500343AE4 /* TabBarItemViewModel.swift in Sources */,
 				133292DD24F29BEE00343AE4 /* BaseView.swift in Sources */,
 				133292DB24F28A8B00343AE4 /* UIView+Radius.swift in Sources */,
