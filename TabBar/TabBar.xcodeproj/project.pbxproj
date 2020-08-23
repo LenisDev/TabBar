@@ -14,6 +14,8 @@
 		133292D324F285E200343AE4 /* StylableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292D224F285E200343AE4 /* StylableView.swift */; };
 		133292D924F288C400343AE4 /* CALayer+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292D824F288C400343AE4 /* CALayer+Border.swift */; };
 		133292DB24F28A8B00343AE4 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292DA24F28A8B00343AE4 /* UIView+Radius.swift */; };
+		133292DD24F29BEE00343AE4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292DC24F29BEE00343AE4 /* BaseView.swift */; };
+		133292DF24F29BFB00343AE4 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292DE24F29BFB00343AE4 /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		133292D224F285E200343AE4 /* StylableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylableView.swift; sourceTree = "<group>"; };
 		133292D824F288C400343AE4 /* CALayer+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Border.swift"; sourceTree = "<group>"; };
 		133292DA24F28A8B00343AE4 /* UIView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
+		133292DC24F29BEE00343AE4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		133292DE24F29BFB00343AE4 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			children = (
 				133292D024F285A200343AE4 /* DesignableView.swift */,
 				133292D224F285E200343AE4 /* StylableView.swift */,
+				133292DC24F29BEE00343AE4 /* BaseView.swift */,
+				133292DE24F29BFB00343AE4 /* BaseViewModel.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -234,8 +240,10 @@
 			files = (
 				133292D324F285E200343AE4 /* StylableView.swift in Sources */,
 				133292D924F288C400343AE4 /* CALayer+Border.swift in Sources */,
+				133292DD24F29BEE00343AE4 /* BaseView.swift in Sources */,
 				133292DB24F28A8B00343AE4 /* UIView+Radius.swift in Sources */,
 				133292D124F285A200343AE4 /* DesignableView.swift in Sources */,
+				133292DF24F29BFB00343AE4 /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
