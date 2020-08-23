@@ -11,15 +11,20 @@ import UIKit
 public protocol Stylable {
     
     var bgColor: UIColor { get }
+    var selectedBGColor: UIColor { get }
     
     var tintColor: UIColor { get }
+    var selectedTintColor: UIColor { get }
     
     var border: Border { get }
+    var selectedBorder: Border { get }
     
     var radius: Radius { get }
+    var selectedRadius: Radius { get }
     
 }
 
+// MARK: - Border
 public struct Border {
     let color: UIColor
     let width: CGFloat
@@ -35,6 +40,13 @@ public struct Border {
     }
 }
 
+public extension Border {
+    
+    static var none: Border { Border(color: .clear, width: 0, edges: [.all]) }
+    
+}
+
+// MARK: - Radius
 public struct Radius {
     let size: CGFloat
     let corners: [UIRectCorner]
@@ -45,4 +57,10 @@ public struct Radius {
         self.size = size
         self.corners = corners
     }
+}
+
+extension Radius {
+    
+    static var none: Radius { Radius(size: 0, corners: [.allCorners]) }
+    
 }
