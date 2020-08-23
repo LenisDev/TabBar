@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Stylable {
+public protocol Stylable {
     
     var bgColor: UIColor { get }
     
@@ -20,14 +20,14 @@ protocol Stylable {
     
 }
 
-struct Border {
+public struct Border {
     let color: UIColor
     let width: CGFloat
     let edges: [UIRectEdge]
 }
 
-struct Radius {
+public struct Radius {
     let color: UIColor
-    let width: CGFloat
-    let edges: [UIRectCorner]
+    let size: CGFloat
+    let corners: [UIRectCorner]
 }

@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol DesignableView: UIView {
+public protocol DesignableView: UIView {
     
     @discardableResult
     func bgColor(_ color: UIColor) -> Self
     
     @discardableResult
-    func border(_ color: UIColor, width: CGFloat, edges: [UIRectEdge]) -> Self
+    func border(_ value: Border) -> Self
     
     @discardableResult
-    func radius(_ size: CGFloat, corners: [UIRectCorner]) -> Self
+    func radius(_ value: Radius) -> Self
     
 }
 
@@ -31,18 +31,18 @@ extension DesignableView {
     }
     
     @discardableResult
-    func border(_ color: UIColor, width: CGFloat, edges: [UIRectEdge]) -> Self {
-        edges.forEach { edge in
-            self.layer.border(color, width: width, edge: edge)
+    func border(_ value: Border) -> Self {
+        value.edges.forEach { edge in
+            self.layer.border(value.color, width: value.width, edge: edge)
         }
         
         return self
     }
     
     @discardableResult
-    func radius(_ size: CGFloat, corners: [UIRectCorner]) -> Self {
-        corners.forEach { corner in
-            self.add(radius: size, corner: corner)
+    func radius(_ value: Radius) -> Self {
+        value.corners.forEach { corner in
+            self.add(radius: value.size, corner: corner)
         }
         
         return self
