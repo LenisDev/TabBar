@@ -48,7 +48,7 @@ public extension UIView {
     
 }
 
-extension UIView {
+public extension UIView {
     
     @discardableResult
     func with(width: CGFloat? = nil, height: CGFloat? = nil) -> Self {
