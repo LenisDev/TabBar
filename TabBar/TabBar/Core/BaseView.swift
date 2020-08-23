@@ -48,19 +48,3 @@ public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
     }
     
 }
-
-// MARK: - Style
-extension BaseView {
-    
-    @discardableResult
-    func style(_ style: Stylable) -> Self {
-        
-        // bg color
-        self.bgColor(style.bgColor)
-            .border(style.border)
-            .radius(style.radius)
-        
-        return self
-    }
-    
-}
