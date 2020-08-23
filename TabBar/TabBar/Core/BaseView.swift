@@ -17,6 +17,8 @@ public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
         }
     }
     
+    private(set) var rootView = UIView()
+    
     // MARK: - Inits
     public init(data: DATA) {
         self.data = data
@@ -37,7 +39,7 @@ public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
     }
     
     func setupViews() {
-        
+        self.rootView.sameSize(as: self)
     }
     
     func setupData() {
