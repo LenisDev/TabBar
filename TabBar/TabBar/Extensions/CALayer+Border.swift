@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CALayer {
+public extension CALayer {
 
     func border(_ color: UIColor, width: CGFloat, edge: UIRectEdge) {
 
@@ -16,10 +16,10 @@ extension CALayer {
 
         switch edge {
         case UIRectEdge.top:
-            border.frame = CGRect(x: 0, y: 0, width: self.frame.height, height: width)
+            border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: width)
             break
         case UIRectEdge.bottom:
-            border.frame = CGRect(x: 0, y: self.frame.height - width, width: UIScreen.main.bounds.width, height: width)
+            border.frame = CGRect(x: 0, y: self.frame.height - width, width: self.frame.width, height: width)
             break
         case UIRectEdge.left:
             border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.height)
@@ -28,7 +28,8 @@ extension CALayer {
             border.frame = CGRect(x: self.frame.width - width, y: 0, width: width, height: self.frame.height)
             break
         default:
-            break
+            self.borderWidth = width
+            self.borderColor = color.cgColor
         }
 
         border.backgroundColor = color.cgColor;
