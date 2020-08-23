@@ -10,4 +10,24 @@ import UIKit
 
 protocol Stylable {
     
+    var bgColor: UIColor { get }
+    
+    var tintColor: UIColor { get }
+    
+    var border: Border { get }
+    
+    var radius: Radius { get }
+    
+}
+
+struct Border {
+    let color: UIColor
+    let width: CGFloat
+    let edges: [UIRectEdge]
+}
+
+struct Radius {
+    let color: UIColor
+    let width: CGFloat
+    let edges: [UIRectCorner]
 }
