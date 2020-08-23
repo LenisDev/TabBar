@@ -8,11 +8,17 @@
 
 import UIKit
 
+public enum TabBarItemState {
+    case selected
+    case unSelected
+}
+
 public struct TabBarItemViewModel: BaseViewModel {
     public var id = String()
     
     let title: String?
     let image: UIImage?
+    var state: TabBarItemState = .unSelected
     
     public init(id: String,
                 title: String? = nil,
