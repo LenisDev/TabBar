@@ -30,6 +30,8 @@ public extension CALayer {
         default:
             self.borderWidth = width
             self.borderColor = color.cgColor
+            
+            return
         }
 
         border.backgroundColor = color.cgColor;

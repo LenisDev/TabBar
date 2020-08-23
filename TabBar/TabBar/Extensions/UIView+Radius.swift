@@ -8,9 +8,17 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     func add (radius: CGFloat, corner: UIRectCorner) {
+        
+        if corner == .allCorners {
+            self.layer.cornerRadius = radius
+            self.layer.masksToBounds = true
+            
+            return
+        }
+        
         let path = UIBezierPath(roundedRect: bounds,
                                 byRoundingCorners: corner,
                                 cornerRadii: CGSize(width: radius,
