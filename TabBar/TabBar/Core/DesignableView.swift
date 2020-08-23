@@ -14,6 +14,9 @@ public protocol DesignableView: UIView {
     func bgColor(_ color: UIColor) -> Self
     
     @discardableResult
+    func tintColor(_ color: UIColor) -> Self
+    
+    @discardableResult
     func border(_ value: Border) -> Self
     
     @discardableResult
@@ -26,6 +29,13 @@ extension DesignableView {
     @discardableResult
     public func bgColor(_ color: UIColor) -> Self {
         self.backgroundColor = color
+        
+        return self
+    }
+    
+    @discardableResult
+    public func tintColor(_ color: UIColor) -> Self {
+        self.tintColor = color
         
         return self
     }
