@@ -38,7 +38,8 @@ public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
         self.setupData()
     }
     
-    func setupViews() {
+    func setupViews() {        
+        self.rootView.subviews.forEach { $0.removeFromSuperview() }
         self.rootView.sameSize(as: self)
     }
     
