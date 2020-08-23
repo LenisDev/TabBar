@@ -20,6 +20,7 @@
 		133292E424F2A18500343AE4 /* TabBarItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E324F2A18500343AE4 /* TabBarItemViewModel.swift */; };
 		133292E624F2B30200343AE4 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E524F2B30200343AE4 /* UIView+Constraints.swift */; };
 		133292E824F2B44100343AE4 /* Number+UIEdgeInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E724F2B44100343AE4 /* Number+UIEdgeInset.swift */; };
+		133292EA24F2B93900343AE4 /* UIStackView+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E924F2B93900343AE4 /* UIStackView+Init.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		133292E324F2A18500343AE4 /* TabBarItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewModel.swift; sourceTree = "<group>"; };
 		133292E524F2B30200343AE4 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		133292E724F2B44100343AE4 /* Number+UIEdgeInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+UIEdgeInset.swift"; sourceTree = "<group>"; };
+		133292E924F2B93900343AE4 /* UIStackView+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Init.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				133292DA24F28A8B00343AE4 /* UIView+Radius.swift */,
 				133292E524F2B30200343AE4 /* UIView+Constraints.swift */,
 				133292E724F2B44100343AE4 /* Number+UIEdgeInset.swift */,
+				133292E924F2B93900343AE4 /* UIStackView+Init.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				133292D324F285E200343AE4 /* Stylable.swift in Sources */,
+				133292EA24F2B93900343AE4 /* UIStackView+Init.swift in Sources */,
 				133292E824F2B44100343AE4 /* Number+UIEdgeInset.swift in Sources */,
 				133292E224F2A17800343AE4 /* TabBarItemView.swift in Sources */,
 				133292D924F288C400343AE4 /* CALayer+Border.swift in Sources */,
