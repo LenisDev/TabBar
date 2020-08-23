@@ -18,7 +18,7 @@ public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
     }
     
     // MARK: - Inits
-    init(data: DATA) {
+    public init(data: DATA) {
         self.data = data
         
         super.init(frame: .zero)

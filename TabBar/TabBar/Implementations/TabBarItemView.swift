@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarItemView: BaseView<TabBarItemViewModel> {
+public class TabBarItemView: BaseView<TabBarItemViewModel> {
     
     private(set) lazy var titleLbl = UILabel()
     private(set) lazy var imageView = UIImageView()
