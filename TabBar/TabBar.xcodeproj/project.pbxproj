@@ -21,6 +21,8 @@
 		133292E624F2B30200343AE4 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E524F2B30200343AE4 /* UIView+Constraints.swift */; };
 		133292E824F2B44100343AE4 /* Number+UIEdgeInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E724F2B44100343AE4 /* Number+UIEdgeInset.swift */; };
 		133292EA24F2B93900343AE4 /* UIStackView+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292E924F2B93900343AE4 /* UIStackView+Init.swift */; };
+		133292EE24F2D1D200343AE4 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292ED24F2D1D200343AE4 /* TabBarView.swift */; };
+		133292F024F2D1DE00343AE4 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292EF24F2D1DE00343AE4 /* TabBarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		133292E524F2B30200343AE4 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		133292E724F2B44100343AE4 /* Number+UIEdgeInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+UIEdgeInset.swift"; sourceTree = "<group>"; };
 		133292E924F2B93900343AE4 /* UIStackView+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Init.swift"; sourceTree = "<group>"; };
+		133292ED24F2D1D200343AE4 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		133292EF24F2D1DE00343AE4 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,10 +149,28 @@
 		133292E024F2A11B00343AE4 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				133292EC24F2D1C000343AE4 /* Tab Bar View */,
+				133292EB24F2D1B300343AE4 /* Tab Bar Item */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		133292EB24F2D1B300343AE4 /* Tab Bar Item */ = {
+			isa = PBXGroup;
+			children = (
 				133292E124F2A17800343AE4 /* TabBarItemView.swift */,
 				133292E324F2A18500343AE4 /* TabBarItemViewModel.swift */,
 			);
-			path = Implementations;
+			path = "Tab Bar Item";
+			sourceTree = "<group>";
+		};
+		133292EC24F2D1C000343AE4 /* Tab Bar View */ = {
+			isa = PBXGroup;
+			children = (
+				133292ED24F2D1D200343AE4 /* TabBarView.swift */,
+				133292EF24F2D1DE00343AE4 /* TabBarViewModel.swift */,
+			);
+			path = "Tab Bar View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133292F024F2D1DE00343AE4 /* TabBarViewModel.swift in Sources */,
 				133292D324F285E200343AE4 /* Stylable.swift in Sources */,
 				133292EA24F2B93900343AE4 /* UIStackView+Init.swift in Sources */,
 				133292E824F2B44100343AE4 /* Number+UIEdgeInset.swift in Sources */,
@@ -271,6 +294,7 @@
 				133292DD24F29BEE00343AE4 /* BaseView.swift in Sources */,
 				133292DB24F28A8B00343AE4 /* UIView+Radius.swift in Sources */,
 				133292D124F285A200343AE4 /* DesignableView.swift in Sources */,
+				133292EE24F2D1D200343AE4 /* TabBarView.swift in Sources */,
 				133292DF24F29BFB00343AE4 /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
