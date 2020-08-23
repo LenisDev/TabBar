@@ -10,6 +10,10 @@
 		1332929924F2821300343AE4 /* TabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1332928F24F2821300343AE4 /* TabBar.framework */; };
 		1332929E24F2821300343AE4 /* TabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1332929D24F2821300343AE4 /* TabBarTests.swift */; };
 		133292A024F2821300343AE4 /* TabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1332929224F2821300343AE4 /* TabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		133292D124F285A200343AE4 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292D024F285A200343AE4 /* DesignableView.swift */; };
+		133292D324F285E200343AE4 /* StylableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292D224F285E200343AE4 /* StylableView.swift */; };
+		133292D924F288C400343AE4 /* CALayer+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292D824F288C400343AE4 /* CALayer+Border.swift */; };
+		133292DB24F28A8B00343AE4 /* UIView+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292DA24F28A8B00343AE4 /* UIView+Radius.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		1332929824F2821300343AE4 /* TabBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1332929D24F2821300343AE4 /* TabBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTests.swift; sourceTree = "<group>"; };
 		1332929F24F2821300343AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		133292D024F285A200343AE4 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		133292D224F285E200343AE4 /* StylableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylableView.swift; sourceTree = "<group>"; };
+		133292D824F288C400343AE4 /* CALayer+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Border.swift"; sourceTree = "<group>"; };
+		133292DA24F28A8B00343AE4 /* UIView+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Radius.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,8 @@
 		1332929124F2821300343AE4 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				133292D724F2889E00343AE4 /* Extensions */,
+				133292D424F286D000343AE4 /* Core */,
 				133292CF24F284EF00343AE4 /* Supporting Files */,
 			);
 			path = TabBar;
@@ -92,6 +102,24 @@
 				1332929324F2821300343AE4 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		133292D424F286D000343AE4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				133292D024F285A200343AE4 /* DesignableView.swift */,
+				133292D224F285E200343AE4 /* StylableView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		133292D724F2889E00343AE4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				133292D824F288C400343AE4 /* CALayer+Border.swift */,
+				133292DA24F28A8B00343AE4 /* UIView+Radius.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +184,7 @@
 				TargetAttributes = {
 					1332928E24F2821300343AE4 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					1332929724F2821300343AE4 = {
 						CreatedOnToolsVersion = 11.6;
@@ -203,6 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133292D324F285E200343AE4 /* StylableView.swift in Sources */,
+				133292D924F288C400343AE4 /* CALayer+Border.swift in Sources */,
+				133292DB24F28A8B00343AE4 /* UIView+Radius.swift in Sources */,
+				133292D124F285A200343AE4 /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +381,7 @@
 		133292A424F2821300343AE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -364,6 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.manishpandey-git.TabBar";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,6 +407,7 @@
 		133292A524F2821300343AE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -396,6 +432,7 @@
 		133292A724F2821300343AE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TabBarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -413,6 +450,7 @@
 		133292A824F2821300343AE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TabBarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
