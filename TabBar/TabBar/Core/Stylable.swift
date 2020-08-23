@@ -24,10 +24,25 @@ public struct Border {
     let color: UIColor
     let width: CGFloat
     let edges: [UIRectEdge]
+    
+    public init (color: UIColor = .black,
+                 width: CGFloat = 1,
+                 edges: [UIRectEdge] = [.all]) {
+        
+        self.color = color
+        self.width = width
+        self.edges = edges
+    }
 }
 
 public struct Radius {
-    let color: UIColor
     let size: CGFloat
     let corners: [UIRectCorner]
+    
+    public init (size: CGFloat = 15,
+                 corners: [UIRectCorner] = [.allCorners]) {
+        
+        self.size = size
+        self.corners = corners
+    }
 }
