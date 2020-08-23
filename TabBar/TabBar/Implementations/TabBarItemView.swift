@@ -10,6 +10,17 @@ import UIKit
 
 class TabBarItemView: BaseView<TabBarItemViewModel> {
     
+    private(set) lazy var titleLbl = UILabel()
+    private(set) lazy var imageView = UIImageView()
     
+    override func setupViews() {
+        super.setupViews()
+        
+    }
+    
+    override func setupData() {
+        super.setupData()
+        
+    }
     
 }

@@ -10,12 +10,14 @@ import UIKit
 
 public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
     
+    // MARK: - Properties
     var data: DATA {
         didSet {
             self.initialize()
         }
     }
     
+    // MARK: - Inits
     init(data: DATA) {
         self.data = data
         
@@ -27,16 +29,12 @@ public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    // MARK: - Setups
     private func initialize() {
         self.setupViews()
         self.setupData()
     }
-    
-}
-
-// MARK: - Setups
-extension BaseView {
     
     func setupViews() {
         
