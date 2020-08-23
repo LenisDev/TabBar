@@ -24,14 +24,14 @@ public protocol DesignableView: UIView {
 extension DesignableView {
     
     @discardableResult
-    func bgColor(_ color: UIColor) -> Self {
+    public func bgColor(_ color: UIColor) -> Self {
         self.backgroundColor = color
         
         return self
     }
     
     @discardableResult
-    func border(_ value: Border) -> Self {
+    public func border(_ value: Border) -> Self {
         value.edges.forEach { edge in
             self.layer.border(value.color, width: value.width, edge: edge)
         }
@@ -40,7 +40,7 @@ extension DesignableView {
     }
     
     @discardableResult
-    func radius(_ value: Radius) -> Self {
+    public func radius(_ value: Radius) -> Self {
         value.corners.forEach { corner in
             self.add(radius: value.size, corner: corner)
         }
