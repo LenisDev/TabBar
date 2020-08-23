@@ -22,6 +22,8 @@ public protocol DesignableView: UIView {
     @discardableResult
     func radius(_ value: Radius) -> Self
     
+    @discardableResult
+    func style(_ style: Stylable) -> Self
 }
 
 extension DesignableView {
@@ -54,6 +56,17 @@ extension DesignableView {
         value.corners.forEach { corner in
             self.add(radius: value.size, corner: corner)
         }
+        
+        return self
+    }
+    
+    @discardableResult
+    public func style(_ style: Stylable) -> Self {
+        
+        // bg color
+        self.bgColor(style.bgColor)
+            .border(style.border)
+            .radius(style.radius)
         
         return self
     }
