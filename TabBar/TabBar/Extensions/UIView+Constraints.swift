@@ -18,7 +18,8 @@ public extension UIView {
         }
     }
     
-    func sameSize(as parentView: UIView, margin: UIEdgeInsets = .zero) {
+    @discardableResult
+    func sameSize(as parentView: UIView, margin: UIEdgeInsets = .zero) -> Self {
         
         add(to: parentView)
         
@@ -28,7 +29,41 @@ public extension UIView {
             self.topAnchor.constraint(equalTo: parentView.topAnchor, constant: margin.top),
             self.bottomAnchor.constraint(equalTo: parentView.bottomAnchor, constant: -margin.bottom)
         ])
+     
+        return self
+    }
+    
+    @discardableResult
+    func center(to parentView: UIView) -> Self {
         
+        add(to: parentView)
+        
+        NSLayoutConstraint.activate([
+            self.centerXAnchor.constraint(equalTo: parentView.centerXAnchor),
+            self.centerYAnchor.constraint(equalTo: parentView.centerYAnchor)
+        ])
+        
+        return self
+    }
+    
+}
+
+extension UIView {
+    
+    @discardableResult
+    func with(width: CGFloat? = nil, height: CGFloat? = nil) -> Self {
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        if let unwrappedWidth = width {
+            self.widthAnchor.constraint(equalToConstant: unwrappedWidth).isActive = true
+        }
+        
+        if let unwrappedHeight = height {
+            self.heightAnchor.constraint(equalToConstant: unwrappedHeight).isActive = true
+        }
+        
+        return self
     }
     
 }
