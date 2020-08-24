@@ -10,7 +10,7 @@ import UIKit
 import TabBar
 
 class RootViewController: UIViewController {
-    
+
     let tabView = TabBarView(data: TabBarViewModel(items: [TabBarItemViewModel(id: UUID().description,
                                                                                title: "Tab 1",
                                                                                image: UIImage(systemName: "trash"),
@@ -20,25 +20,21 @@ class RootViewController: UIViewController {
                                                                                image: nil)])) { selectedItem in
                                                                                 print(selectedItem)
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tabView
             .center(to: self.view)
             .with(width: 300)
-        
+
         tabView
             .style(CapsuleShapeStyle())
 //            .itemSelectedStyle(CapsuleShapeSelectedStyle())
         //            .bgColor(.red)
         //            .tintColor(.white)
         //            .radius(Radius(size: 20, corners: [.allCorners]))
-        
-        
-    }
-    
-    
-}
 
+    }
+
+}

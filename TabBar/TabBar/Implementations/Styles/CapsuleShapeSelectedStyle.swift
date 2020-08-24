@@ -10,15 +10,15 @@ import UIKit
 
 /// Provides capsule shape style
 public struct CapsuleShapeSelectedStyle: Stylable {
-    
+
     public var bgColor: UIColor { .red }
-    
+
     public var tintColor: UIColor { .white }
-    
+
     public var border: Border { .none }
-    
+
     public var radius: Radius { Radius(size: 25, corners: [.allCorners]) }
-    
+
     public init() { }
-    
+
 }

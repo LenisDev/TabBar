@@ -9,8 +9,8 @@
 import Foundation
 
 public protocol BaseViewModel {
-    
-    associatedtype ID: Equatable
-    var id: ID { get set }
-    
+
+    associatedtype IDEQUATABLE: Equatable
+    var id: IDEQUATABLE { get set }
+
 }

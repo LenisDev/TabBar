@@ -17,24 +17,24 @@ public extension CALayer {
         switch edge {
         case .top:
             border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: width)
-            break
+
         case .bottom:
             border.frame = CGRect(x: 0, y: self.frame.height - width, width: self.frame.width, height: width)
-            break
+
         case .left:
             border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.height)
-            break
+
         case .right:
             border.frame = CGRect(x: self.frame.width - width, y: 0, width: width, height: self.frame.height)
-            break
+
         default:
             self.borderWidth = width
             self.borderColor = color.cgColor
-            
+
             return
         }
 
-        border.backgroundColor = color.cgColor;
+        border.backgroundColor = color.cgColor
 
         self.addSublayer(border)
     }

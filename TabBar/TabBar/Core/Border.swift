@@ -13,7 +13,7 @@ public struct Border {
     let color: UIColor
     let width: CGFloat
     let edges: [UIRectEdge]
-    
+
     /// `Border` init
     /// - Parameters:
     ///   - color: color of border, defaults to black
@@ -22,7 +22,7 @@ public struct Border {
     public init (color: UIColor = .black,
                  width: CGFloat = 1,
                  edges: [UIRectEdge] = [.all]) {
-        
+
         self.color = color
         self.width = width
         self.edges = edges
@@ -30,12 +30,12 @@ public struct Border {
 }
 
 public extension Border {
-    
+
     /// Provides neglegible `Border` value
     ///
     ///  - Defaults
     ///     - clear color, 0 thickness and all edges
     ///
     static var none: Border { Border(color: .clear, width: 0, edges: [.all]) }
-    
+
 }
