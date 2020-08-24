@@ -3,6 +3,33 @@
 [![License](https://img.shields.io/github/license/LenisDev/TabBar)](https://github.com/LenisDev/TabBar/blob/master/LICENSE)
 [![Release version](https://img.shields.io/cocoapods/v/Tab)](https://github.com/LenisDev/TabBar/releases)
 
+
+- [Overview](#overview)
+- [Usage](#usage)
+- [Installation Guide](#installation-guide)
+- [Full Documentation](https://lenisdev.github.io/TabBar/index.html)
+- [Contribute](#contribute)
+
+<br>
+
+### Overview
+Leight-weight, reusable and heighly customizable tab bar.
+
+<br>
+
+### Usage
+```
+  let tabItems = [TabBarItemViewModel(id: UUID().description, title: "Tab 1", image: UIImage(systemName: "trash"), state: .selected),
+                  TabBarItemViewModel(id: UUID().description, title: "Tab 2", image: nil)]
+                  
+  let tabView = TabBarView(data: TabBarViewModel(items: tabItems)) { selectedItem in
+    // on item selected
+    print(selectedItem)
+  }
+```
+
+<br>
+
 ### Installation Guide
 
 #### Carthage
@@ -46,3 +73,10 @@ run `pod install` from current project directory.
 >pod try Tab
 >```
 >
+
+<br>
+
+### Contribute
+> - Play around and report bugs
+> - Fix issues and create PR
+> - Add documentations and new features
