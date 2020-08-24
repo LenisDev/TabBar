@@ -33,7 +33,7 @@ public struct TabBarViewModel: BaseViewModel {
     }
 }
 
-extension TabBarViewModel {
+public extension TabBarViewModel {
     
     /// Item whose state is selected
     var selectedItem: TabBarItemViewModel? {
