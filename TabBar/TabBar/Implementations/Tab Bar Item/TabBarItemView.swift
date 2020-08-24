@@ -10,6 +10,14 @@ import UIKit
 
 public typealias SelectedTabItem = (TabBarItemViewModel) -> Void
 
+
+/// Item view shown inside `TabBarView`
+///
+/// # View visibility
+/// - Only image will be shown when title is nil
+/// - Title label will be shown when image is nil
+/// - Both title label and image view will be shown when title and image are provided
+///
 public class TabBarItemView: BaseView<TabBarItemViewModel> {
     
     private(set) lazy var titleLbl = UILabel()
