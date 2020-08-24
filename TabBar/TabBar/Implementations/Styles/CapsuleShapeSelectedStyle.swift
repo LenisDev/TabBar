@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Provides capsule shape style
 public struct CapsuleShapeSelectedStyle: Stylable {
     
     public var bgColor: UIColor { .red }

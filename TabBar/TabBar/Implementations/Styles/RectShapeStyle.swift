@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Provides rectangular shape style
 public struct RectShapeStyle: Stylable {
     
     public var bgColor: UIColor { .lightGray }
