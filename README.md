@@ -22,11 +22,11 @@ run `carthage update` from current project directory.
 #### CocoaPods
 
 Step 1:
-Add pod 'Tab', '~> 0.0' to your Podfile:
+Add pod `'Tab', '~> 0.0.1'` to your Podfile:
 
 ```
 target 'MyApp' do
-  pod 'Tab', '~> 0.0'
+  pod 'Tab', '~> 0.0.1'
 end
 ```
 
