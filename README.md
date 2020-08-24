@@ -1,5 +1,5 @@
-# TabBar
-Easy to use functional tab bar for swift projects
+![Minimal, yet higly customizable](/Logo.png "TabBar - Project Logo")
+
 
 ### Installation Guide
 
