@@ -25,7 +25,7 @@ public struct Radius {
     }
 }
 
-extension Radius {
+public extension Radius {
 
     /// Provides neglegible `Radius` value
     ///
