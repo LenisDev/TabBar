@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/LenisDev/TabBar'
   s.authors = { 'Manish Pandey' => '' }
   
-  s.source = { :git => 'https://github.com/LenisDev/TabBar.git', :branch => s.version }
+  s.source = { :git => 'https://github.com/LenisDev/TabBar.git', :tag => s.version }
   s.documentation_url = 'https://github.com/LenisDev/TabBar'
 
   s.ios.deployment_target = '10.0'
