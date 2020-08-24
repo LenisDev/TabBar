@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = 'TabBar'
+  s.name = 'Tab'
   s.version = '0.0.1'
   s.license = 'MIT'
 
