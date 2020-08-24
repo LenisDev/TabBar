@@ -76,6 +76,15 @@ run `pod install` from current project directory.
 
 <br>
 
+#### Swift Package Manager
+```
+dependencies: [
+    .package(url: "https://github.com/LenisDev/TabBar.git", .upToNextMajor(from: "0.0.1"))
+]
+```
+
+<br>
+
 ### Contribute
 > - Play around and report bugs
 > - Fix issues and create PR
