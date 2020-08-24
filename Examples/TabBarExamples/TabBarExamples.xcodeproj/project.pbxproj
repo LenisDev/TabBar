@@ -11,6 +11,8 @@
 		1308315924F42DE10082D003 /* RectStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308315824F42DE10082D003 /* RectStyle.swift */; };
 		1308315C24F42E5B0082D003 /* ViewModelConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308315B24F42E5B0082D003 /* ViewModelConstants.swift */; };
 		1308315E24F42F3C0082D003 /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308315D24F42F3C0082D003 /* SizeConstants.swift */; };
+		1308316024F437AF0082D003 /* RectBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308315F24F437AF0082D003 /* RectBorderStyle.swift */; };
+		1308316224F438650082D003 /* CapsuleBorderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308316124F438650082D003 /* CapsuleBorderStyle.swift */; };
 		133292B624F282B000343AE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292B524F282B000343AE4 /* AppDelegate.swift */; };
 		133292BA24F282B000343AE4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133292B924F282B000343AE4 /* RootViewController.swift */; };
 		133292BF24F282B100343AE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133292BE24F282B100343AE4 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		1308315824F42DE10082D003 /* RectStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectStyle.swift; sourceTree = "<group>"; };
 		1308315B24F42E5B0082D003 /* ViewModelConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelConstants.swift; sourceTree = "<group>"; };
 		1308315D24F42F3C0082D003 /* SizeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
+		1308315F24F437AF0082D003 /* RectBorderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectBorderStyle.swift; sourceTree = "<group>"; };
+		1308316124F438650082D003 /* CapsuleBorderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleBorderStyle.swift; sourceTree = "<group>"; };
 		133292B224F282B000343AE4 /* TabBarExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		133292B524F282B000343AE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		133292B924F282B000343AE4 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				1308315624F42D2F0082D003 /* RectBottomBorderStyle.swift */,
+				1308316124F438650082D003 /* CapsuleBorderStyle.swift */,
+				1308315F24F437AF0082D003 /* RectBorderStyle.swift */,
 				1308315824F42DE10082D003 /* RectStyle.swift */,
 			);
 			path = Styles;
@@ -198,9 +204,11 @@
 				1308315C24F42E5B0082D003 /* ViewModelConstants.swift in Sources */,
 				1308315724F42D2F0082D003 /* RectBottomBorderStyle.swift in Sources */,
 				1308315E24F42F3C0082D003 /* SizeConstants.swift in Sources */,
+				1308316024F437AF0082D003 /* RectBorderStyle.swift in Sources */,
 				1308315924F42DE10082D003 /* RectStyle.swift in Sources */,
 				133292BA24F282B000343AE4 /* RootViewController.swift in Sources */,
 				133292B624F282B000343AE4 /* AppDelegate.swift in Sources */,
+				1308316224F438650082D003 /* CapsuleBorderStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

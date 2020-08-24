@@ -1,5 +1,5 @@
 //
-//  RectBottomBorderStyle.swift
+//  CapsuleBorderStyle.swift
 //  TabBarExamples
 //
 //  Created by Manish on 24/08/20.
@@ -9,14 +9,15 @@
 import UIKit
 import TabBar
 
-struct RectBottomBorderStyle: Stylable {
+struct CapsuleBorderStyle: Stylable {
 
     var bgColor: UIColor { .white }
 
     var tintColor: UIColor { .black }
 
-    var border: Border { Border(color: .red, width: 2, edges: [.bottom]) }
+    var border: Border { Border(color: .red, width: 2, edges: [.all]) }
 
-    var radius: Radius { .none }
+    var radius: Radius { Radius(size: tabBarRadius, corners: [.allCorners]) }
 
 }
+

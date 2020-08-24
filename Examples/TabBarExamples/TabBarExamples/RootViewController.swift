@@ -22,12 +22,14 @@ class RootViewController: UIViewController {
 
         tabView
             .center(to: self.view)
-            .with(width: 300)
+            .with(width: 350)
 
         tabView
             .style(RectStyle())
             .itemUnselectedStyle(RectStyle())
-            .itemSelectedStyle(RectBottomBorderStyle())
+            .itemSelectedStyle(CapsuleBorderStyle())
+            //.itemSelectedStyle(RectBorderStyle())
+            //.itemSelectedStyle(RectBottomBorderStyle())
 
     }
 
