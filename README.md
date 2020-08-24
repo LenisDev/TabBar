@@ -3,6 +3,22 @@ Easy to use functional tab bar for swift projects
 
 ### Installation Guide
 
+#### Carthage
+
+Step 1: 
+Add following to your CartFile
+
+```
+github "LenisDev/TabBar" ~> 0.0.1
+```
+
+Step 2:
+run `carthage update` from current project directory.
+
+*That's all, you have it installed.*
+
+<br>
+
 #### CocoaPods
 
 Step 1:
