@@ -1,6 +1,6 @@
 ![Minimal, yet higly customizable](/Logo.png "TabBar - Project Logo")
 
-![License](https://img.shields.io/github/license/LenisDev/TabBar)
+[![License](https://img.shields.io/github/license/LenisDev/TabBar)](https://github.com/LenisDev/TabBar/blob/master/LICENSE)
 ![Release version](https://img.shields.io/cocoapods/v/Tab)
 
 ### Installation Guide
