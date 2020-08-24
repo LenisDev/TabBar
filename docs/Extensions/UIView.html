@@ -175,7 +175,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Adds current view to <code>parentView</code></p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -184,6 +185,25 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">to</span> <span class="nv">parentView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parentView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Where current view should be added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -201,7 +221,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Adds current view to same size as parent view</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -211,6 +232,41 @@
 <span class="kd">func</span> <span class="nf">sameSize</span><span class="p">(</span><span class="k">as</span> <span class="nv">parentView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="nv">margin</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="o">=</span> <span class="o">.</span><span class="n">zero</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parentView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Where current view should be added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>margin</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>margin between current view and parent view</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self</p>
                       </div>
                     </section>
                   </div>
@@ -228,7 +284,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Adds current view to vertically and horizontally center to <code>parentView</code></p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -238,6 +295,29 @@
 <span class="kd">func</span> <span class="nf">center</span><span class="p">(</span><span class="n">to</span> <span class="nv">parentView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parentView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Where current view should be added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self</p>
                       </div>
                     </section>
                   </div>
@@ -255,7 +335,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Adds width and height on current view</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -265,6 +346,41 @@
 <span class="kd">func</span> <span class="nf">with</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>width</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>width value</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>height</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>height value</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self</p>
                       </div>
                     </section>
                   </div>
@@ -282,7 +398,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Helper function for adding corner radius to current view using given parameter values</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -291,6 +408,37 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">corner</span><span class="p">:</span> <span class="kt">UIRectCorner</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>radius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>radius size</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>corner</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>corner at which radius should be applied.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
