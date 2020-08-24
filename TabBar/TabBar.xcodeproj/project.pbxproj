@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1308313624F371090082D003 /* CapsuleShapeSelectedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308313524F371090082D003 /* CapsuleShapeSelectedStyle.swift */; };
+		1308313824F37C490082D003 /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308313724F37C490082D003 /* Border.swift */; };
+		1308313A24F37C630082D003 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308313924F37C630082D003 /* Radius.swift */; };
 		1332929924F2821300343AE4 /* TabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1332928F24F2821300343AE4 /* TabBar.framework */; };
 		1332929E24F2821300343AE4 /* TabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1332929D24F2821300343AE4 /* TabBarTests.swift */; };
 		133292A024F2821300343AE4 /* TabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1332929224F2821300343AE4 /* TabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		1308313524F371090082D003 /* CapsuleShapeSelectedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleShapeSelectedStyle.swift; sourceTree = "<group>"; };
+		1308313724F37C490082D003 /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
+		1308313924F37C630082D003 /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
 		1332928F24F2821300343AE4 /* TabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1332929224F2821300343AE4 /* TabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
 		1332929324F2821300343AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			children = (
 				133292D024F285A200343AE4 /* DesignableView.swift */,
 				133292D224F285E200343AE4 /* Stylable.swift */,
+				1308313724F37C490082D003 /* Border.swift */,
+				1308313924F37C630082D003 /* Radius.swift */,
 				133292DC24F29BEE00343AE4 /* BaseView.swift */,
 				133292DE24F29BFB00343AE4 /* BaseViewModel.swift */,
 			);
@@ -309,7 +315,9 @@
 				133292F524F2E0A200343AE4 /* CapsuleShapeStyle.swift in Sources */,
 				133292D924F288C400343AE4 /* CALayer+Border.swift in Sources */,
 				133292E624F2B30200343AE4 /* UIView+Constraints.swift in Sources */,
+				1308313824F37C490082D003 /* Border.swift in Sources */,
 				133292E424F2A18500343AE4 /* TabBarItemViewModel.swift in Sources */,
+				1308313A24F37C630082D003 /* Radius.swift in Sources */,
 				133292DD24F29BEE00343AE4 /* BaseView.swift in Sources */,
 				133292DB24F28A8B00343AE4 /* UIView+Radius.swift in Sources */,
 				133292D124F285A200343AE4 /* DesignableView.swift in Sources */,
