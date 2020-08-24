@@ -19,6 +19,7 @@ public typealias SelectedTabItem = (TabBarItemViewModel) -> Void
 ///
 public class TabBarItemView: BaseView<TabBarItemViewModel> {
 
+    // MARK: - Properties
     private(set) lazy var titleLbl = UILabel()
     private(set) lazy var imageView = UIImageView()
 
@@ -28,7 +29,18 @@ public class TabBarItemView: BaseView<TabBarItemViewModel> {
                                                      distribution: .fillProportionally)
 
     private(set) var onTap: SelectedTabItem
+    private(set) var currentStyle: Stylable?
 
+    // MARK: - Draw
+    public override func draw(_ rect: CGRect) {
+        super.draw(rect)
+
+        if let safeStyle = currentStyle {
+            self.style(safeStyle)
+        }
+    }
+
+    // MARK: - Init
     public init(data: TabBarItemViewModel,
                 onTap: @escaping SelectedTabItem) {
 
@@ -40,6 +52,7 @@ public class TabBarItemView: BaseView<TabBarItemViewModel> {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Setups
     override func setupViews() {
         super.setupViews()
 
@@ -63,6 +76,7 @@ public class TabBarItemView: BaseView<TabBarItemViewModel> {
         self.imageView.image = data.image
     }
 
+    // MARK: - Tint color - override
     @discardableResult
     public override func tintColor(_ color: UIColor) -> Self {
         self.titleLbl.textColor = color
@@ -102,6 +116,15 @@ extension TabBarItemView {
 
     @objc private func onTapGesture() {
         onTap(self.data)
+    }
+
+    @discardableResult
+    public func style(_ style: Stylable) -> Self {
+        super.style(style)
+
+        self.currentStyle = style
+
+        return self
     }
 
 }
