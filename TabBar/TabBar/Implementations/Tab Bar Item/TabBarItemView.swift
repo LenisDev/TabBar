@@ -56,6 +56,14 @@ public class TabBarItemView: BaseView<TabBarItemViewModel> {
         self.imageView.image = data.image
     }
     
+    @discardableResult
+    public override func tintColor(_ color: UIColor) -> Self {
+        self.titleLbl.textColor = color
+        self.imageView.tintColor = color
+        
+        return self
+    }
+    
 }
 
 // MARK: - Setups
@@ -84,28 +92,6 @@ extension TabBarItemView {
 
 // MARK: - Extend
 extension TabBarItemView {
-
-    @discardableResult
-    func style(_ style: Stylable) -> Self {
-        if data.state == .unSelected {
-            super.style(style)
-        } else {
-            self.bgColor(style.selectedBGColor)
-                .border(style.selectedBorder)
-                .radius(style.selectedRadius)
-                .tintColor(style.selectedTintColor)
-        }
-        
-        return self
-    }
-    
-    @discardableResult
-    public func tintColor(_ color: UIColor) -> TabBarItemView {
-        self.titleLbl.textColor = color
-        self.imageView.tintColor = color
-        
-        return self
-    }
     
     @objc private func onTapGesture() {
         onTap(self.data)

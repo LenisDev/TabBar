@@ -12,19 +12,11 @@ public struct RectShapeStyle: Stylable {
     
     public var bgColor: UIColor { .lightGray }
     
-    public var selectedBGColor: UIColor { .gray }
-    
     public var tintColor: UIColor { .black }
-    
-    public var selectedTintColor: UIColor { .white }
     
     public var border: Border { .none }
     
-    public var selectedBorder: Border { .none }
-    
     public var radius: Radius { .none }
-    
-    public var selectedRadius: Radius { .none }
     
     public init() { }
 }

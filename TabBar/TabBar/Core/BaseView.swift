@@ -47,4 +47,11 @@ public class BaseView<DATA: BaseViewModel>: UIView, DesignableView {
         
     }
     
+    @discardableResult
+    public func tintColor(_ color: UIColor) -> Self {
+        self.tintColor = color
+        
+        return self
+    }
+    
 }

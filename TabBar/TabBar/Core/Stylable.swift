@@ -11,16 +11,12 @@ import UIKit
 public protocol Stylable {
     
     var bgColor: UIColor { get }
-    var selectedBGColor: UIColor { get }
     
     var tintColor: UIColor { get }
-    var selectedTintColor: UIColor { get }
     
     var border: Border { get }
-    var selectedBorder: Border { get }
     
     var radius: Radius { get }
-    var selectedRadius: Radius { get }
     
 }
 

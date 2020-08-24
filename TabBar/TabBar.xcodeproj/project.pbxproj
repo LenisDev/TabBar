@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1308313624F371090082D003 /* CapsuleShapeSelectedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1308313524F371090082D003 /* CapsuleShapeSelectedStyle.swift */; };
 		1332929924F2821300343AE4 /* TabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1332928F24F2821300343AE4 /* TabBar.framework */; };
 		1332929E24F2821300343AE4 /* TabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1332929D24F2821300343AE4 /* TabBarTests.swift */; };
 		133292A024F2821300343AE4 /* TabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1332929224F2821300343AE4 /* TabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1308313524F371090082D003 /* CapsuleShapeSelectedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleShapeSelectedStyle.swift; sourceTree = "<group>"; };
 		1332928F24F2821300343AE4 /* TabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1332929224F2821300343AE4 /* TabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
 		1332929324F2821300343AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				133292F224F2E09400343AE4 /* RectShapeStyle.swift */,
 				133292F424F2E0A200343AE4 /* CapsuleShapeStyle.swift */,
+				1308313524F371090082D003 /* CapsuleShapeSelectedStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				133292F024F2D1DE00343AE4 /* TabBarViewModel.swift in Sources */,
 				133292D324F285E200343AE4 /* Stylable.swift in Sources */,
+				1308313624F371090082D003 /* CapsuleShapeSelectedStyle.swift in Sources */,
 				133292EA24F2B93900343AE4 /* UIStackView+Init.swift in Sources */,
 				133292E824F2B44100343AE4 /* Number+UIEdgeInset.swift in Sources */,
 				133292E224F2A17800343AE4 /* TabBarItemView.swift in Sources */,

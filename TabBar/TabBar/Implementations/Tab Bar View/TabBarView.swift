@@ -17,7 +17,9 @@ public class TabBarView: BaseView<TabBarViewModel> {
     // MARK: - Properties
     private(set) lazy var itemViews = [TabBarItemView]()
     private(set) var onItemSelected: SelectedTabItem
-    private(set) var itemStyle: Stylable = CapsuleShapeStyle()
+    
+    private(set) var itemUnselectedStyle: Stylable = CapsuleShapeStyle()
+    private(set) var itemSelectedStyle: Stylable = CapsuleShapeSelectedStyle()
     
     // MARK: - Init
     public init(data: TabBarViewModel,
@@ -49,7 +51,8 @@ public class TabBarView: BaseView<TabBarViewModel> {
         }}
         
         // setup item style
-        itemStyle(itemStyle)
+        itemUnselectedStyle(itemUnselectedStyle)
+        itemSelectedStyle(itemSelectedStyle)
         
         self.rootSV.add(arrangedSubViews: itemViews)
     }
@@ -60,12 +63,26 @@ public class TabBarView: BaseView<TabBarViewModel> {
 public extension TabBarView {
     
     @discardableResult
-    func itemStyle(_ style: Stylable) -> Self {
+    func itemUnselectedStyle(_ style: Stylable) -> Self {
         
-        self.itemStyle = style
+        self.itemUnselectedStyle = style
         
         itemViews.forEach { iv in
             iv.style(style)
+        }
+        
+        return self
+    }
+    
+    @discardableResult
+    func itemSelectedStyle(_ style: Stylable) -> Self {
+        
+        self.itemSelectedStyle = style
+        
+        itemViews.forEach { iv in
+            if iv.data.state == .selected {
+                iv.style(style)
+            }
         }
         
         return self

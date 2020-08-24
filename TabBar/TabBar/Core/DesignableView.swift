@@ -67,6 +67,7 @@ extension DesignableView {
         self.bgColor(style.bgColor)
             .border(style.border)
             .radius(style.radius)
+            .tintColor(style.tintColor)
         
         return self
     }
