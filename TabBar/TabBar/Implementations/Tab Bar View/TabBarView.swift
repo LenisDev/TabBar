@@ -8,6 +8,18 @@
 
 import UIKit
 
+/// Provides functionality for showing tab items and handeling sections.
+///
+/// # Confirms to
+/// - `BaseView`, `DesignableView` and `UIView`
+///
+/// # Data Provider
+/// - `TabBarViewModel` confirms to `BaseViewModel`
+///
+/// # Style supeert
+/// - Any object confirming to `Stylable`
+/// - Supports both selected and unSelected state style
+///
 public class TabBarView: BaseView<TabBarViewModel> {
     
     private(set) lazy var rootSV = UIStackView(arrangedSubViews: [],
@@ -22,6 +34,15 @@ public class TabBarView: BaseView<TabBarViewModel> {
     private(set) var itemSelectedStyle: Stylable = CapsuleShapeSelectedStyle()
     
     // MARK: - Init
+    
+    /// Create TabBarView
+    /// - Parameters:
+    ///   - data: data to be shown in tab bar
+    ///   - onItemSelected: Closure invoked when tab item is tapped.
+    ///
+    /// # Important
+    /// - Always use `[weak self]` in `onItemSelected` to avoid referance cycle
+    ///
     public init(data: TabBarViewModel,
                 onItemSelected: @escaping SelectedTabItem) {
         self.onItemSelected = onItemSelected
@@ -62,6 +83,9 @@ public class TabBarView: BaseView<TabBarViewModel> {
 // MARK: - Style
 public extension TabBarView {
     
+    /// Style applied when item's state is unselected
+    /// - Parameter style: style for view
+    /// - Returns: `TabBarView`
     @discardableResult
     func itemUnselectedStyle(_ style: Stylable) -> Self {
         
@@ -74,6 +98,10 @@ public extension TabBarView {
         return self
     }
     
+    
+    /// Style applied when item's state is selected
+    /// - Parameter style: style for view
+    /// - Returns: `TabBarView`
     @discardableResult
     func itemSelectedStyle(_ style: Stylable) -> Self {
         
