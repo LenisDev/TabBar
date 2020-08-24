@@ -10,6 +10,14 @@ import UIKit
 
 public extension UIStackView {
 
+    /// Creates stack view with given parameter values.
+    /// 
+    /// - Parameters:
+    ///   - arrangedSubViews: views to be added
+    ///   - spacing: spacing between sub views, defaults to 0
+    ///   - axis: vertical or horizontal presentation
+    ///   - distribution: size and space distribution between views
+    ///   - margin: margin between subviews and stack view
     convenience init(arrangedSubViews: [UIView],
                      spacing: CGFloat = 0,
                      axis: NSLayoutConstraint.Axis = .vertical,
@@ -29,6 +37,7 @@ public extension UIStackView {
 
 public extension UIStackView {
 
+    /// Removes all subviews from stackview
     func removeAllArrangedSubviews() {
 
         let removedSubviews = arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
@@ -43,6 +52,8 @@ public extension UIStackView {
         removedSubviews.forEach({ $0.removeFromSuperview() })
     }
 
+    /// Adds given views to stackview
+    /// - Parameter arrangedSubViews: views to be added
     func add(arrangedSubViews: [UIView]) {
         arrangedSubViews.forEach { view in
             self.addArrangedSubview(view)

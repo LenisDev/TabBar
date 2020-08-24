@@ -10,6 +10,10 @@ import UIKit
 
 public extension UIView {
 
+    /// Helper function for adding corner radius to current view using given parameter values
+    /// - Parameters:
+    ///   - radius: radius size
+    ///   - corner: corner at which radius should be applied.
     func add (radius: CGFloat, corner: UIRectCorner) {
 
         if corner == .allCorners {

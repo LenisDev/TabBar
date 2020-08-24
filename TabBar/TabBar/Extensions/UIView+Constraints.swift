@@ -10,6 +10,8 @@ import UIKit
 
 public extension UIView {
 
+    /// Adds current view to `parentView`
+    /// - Parameter parentView: Where current view should be added.
     func add(to parentView: UIView) {
         self.translatesAutoresizingMaskIntoConstraints = false
 
@@ -18,6 +20,11 @@ public extension UIView {
         }
     }
 
+    /// Adds current view to same size as parent view
+    /// - Parameters:
+    ///   - parentView: Where current view should be added.
+    ///   - margin: margin between current view and parent view
+    /// - Returns: Self
     @discardableResult
     func sameSize(as parentView: UIView, margin: UIEdgeInsets = .zero) -> Self {
 
@@ -33,6 +40,9 @@ public extension UIView {
         return self
     }
 
+    /// Adds current view to vertically and horizontally center to `parentView`
+    /// - Parameter parentView: Where current view should be added.
+    /// - Returns: Self
     @discardableResult
     func center(to parentView: UIView) -> Self {
 
@@ -50,6 +60,11 @@ public extension UIView {
 
 public extension UIView {
 
+    /// Adds width and height on current view
+    /// - Parameters:
+    ///   - width: width value
+    ///   - height: height value
+    /// - Returns: Self
     @discardableResult
     func with(width: CGFloat? = nil, height: CGFloat? = nil) -> Self {
 

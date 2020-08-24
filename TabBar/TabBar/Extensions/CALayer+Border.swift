@@ -10,6 +10,11 @@ import UIKit
 
 public extension CALayer {
 
+    /// Helper function for adding border on current view using given values.
+    /// - Parameters:
+    ///   - color: border color
+    ///   - width: border width
+    ///   - edge: edge at which border should be drawn
     func border(_ color: UIColor, width: CGFloat, edge: UIRectEdge) {
 
         let border = CALayer()

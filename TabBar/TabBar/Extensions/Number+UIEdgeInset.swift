@@ -10,10 +10,12 @@ import UIKit
 
 public extension Int {
 
+    /// returns `UIEdgeInsets` by making all sides same as current value
     var uiEdgeInsets: UIEdgeInsets {
         return self.cgFloat.uiEdgeInsets
     }
 
+    /// retunrs `CGFloat` type with current value
     var cgFloat: CGFloat {
         return CGFloat(self)
     }
@@ -22,6 +24,7 @@ public extension Int {
 
 public extension CGFloat {
 
+    /// returns `UIEdgeInsets` by making all sides same as current value
     var uiEdgeInsets: UIEdgeInsets {
         return UIEdgeInsets(top: self, left: self, bottom: self, right: self)
     }
