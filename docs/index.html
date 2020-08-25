@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          TabBar 0.0.1 Docs
+          TabBar 0.0.2 Docs
         </a>
          (100% documented)
       </p>
@@ -166,13 +166,25 @@
 
 <p><br></p>
 <h3 id='usage' class='heading'>Usage</h3>
-<pre class="highlight plaintext"><code>  let tabItems = [TabBarItemViewModel(id: UUID().description, title: "Tab 1", image: UIImage(systemName: "trash"), state: .selected),
-                  TabBarItemViewModel(id: UUID().description, title: "Tab 2", image: nil)]
+<pre class="highlight swift"><code>
+  <span class="c1">// Step 1: Create Data for tab bar   </span>
+  <span class="k">let</span> <span class="nv">tabItems</span> <span class="o">=</span> <span class="p">[</span><span class="kt">TabBarItemViewModel</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">()</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="s">"Tab 1"</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"trash"</span><span class="p">),</span> <span class="nv">state</span><span class="p">:</span> <span class="o">.</span><span class="n">selected</span><span class="p">),</span>
+                  <span class="kt">TabBarItemViewModel</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">UUID</span><span class="p">()</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="s">"Tab 2"</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)]</span>
 
-  let tabView = TabBarView(data: TabBarViewModel(items: tabItems)) { selectedItem in
-    // on item selected
-    print(selectedItem)
-  }
+  <span class="c1">// Step 2: Create tab bar</span>
+  <span class="k">let</span> <span class="nv">tabView</span> <span class="o">=</span> <span class="kt">TabBarView</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">TabBarViewModel</span><span class="p">(</span><span class="nv">items</span><span class="p">:</span> <span class="n">tabItems</span><span class="p">))</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">selectedItem</span><span class="p">)</span> <span class="k">in</span> <span class="c1">// always use weak to avoid reference cycle</span>
+    <span class="c1">// on item selected</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">selectedItem</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Step 3: Customize (optional)  </span>
+  <span class="n">tabView</span>
+    <span class="c1">// apply style on tabView (tab items are placed inside this view)</span>
+    <span class="o">.</span><span class="nf">style</span><span class="p">(</span><span class="kt">RectStyle</span><span class="p">())</span>
+    <span class="c1">// apply styles on tab item</span>
+    <span class="o">.</span><span class="nf">itemUnselectedStyle</span><span class="p">(</span><span class="kt">RectStyle</span><span class="p">())</span>
+    <span class="o">.</span><span class="nf">itemSelectedStyle</span><span class="p">(</span><span class="kt">CapsuleBorderStyle</span><span class="p">())</span>
+
 </code></pre>
 
 <p><br></p>
@@ -181,7 +193,7 @@
 
 <p>Step 1: 
 Add following to your CartFile</p>
-<pre class="highlight plaintext"><code>github "LenisDev/TabBar" ~&gt; 0.0.1
+<pre class="highlight plaintext"><code>github "LenisDev/TabBar" ~&gt; 0.0.2
 </code></pre>
 
 <p>Step 2:
@@ -193,9 +205,9 @@ run <code>carthage update</code> from current project directory.</p>
 <h4 id='cocoapods' class='heading'>CocoaPods</h4>
 
 <p>Step 1:
-Add <code>pod &#39;Tab&#39;, &#39;~&gt; 0.0.1&#39;</code> to your Podfile:</p>
+Add <code>pod &#39;Tab&#39;, &#39;~&gt; 0.0.2&#39;</code> to your Podfile:</p>
 <pre class="highlight plaintext"><code>target 'MyApp' do
-  pod 'Tab', '~&gt; 0.0.1'
+  pod 'Tab', '~&gt; 0.0.2'
 end
 </code></pre>
 
@@ -215,7 +227,7 @@ run <code>pod install</code> from current project directory.</p>
 <p><br></p>
 <h4 id='swift-package-manager' class='heading'>Swift Package Manager</h4>
 <pre class="highlight plaintext"><code>dependencies: [
-    .package(url: "https://github.com/LenisDev/TabBar.git", .upToNextMajor(from: "0.0.1"))
+    .package(url: "https://github.com/LenisDev/TabBar.git", .upToNextMajor(from: "0.0.2"))
 ]
 </code></pre>
 
@@ -238,7 +250,7 @@ run <code>pod install</code> from current project directory.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/LenisDev/TabBar" target="_blank" rel="external">Manish</a>. All rights reserved. (Last updated: 2020-08-24)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/LenisDev/TabBar" target="_blank" rel="external">Manish</a>. All rights reserved. (Last updated: 2020-08-25)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
