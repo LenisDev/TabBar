@@ -18,7 +18,7 @@ Leight-weight, reusable and heighly customizable tab bar.
 <br>
 
 ### Usage
-```
+```swift
   let tabItems = [TabBarItemViewModel(id: UUID().description, title: "Tab 1", image: UIImage(systemName: "trash"), state: .selected),
                   TabBarItemViewModel(id: UUID().description, title: "Tab 2", image: nil)]
                   
