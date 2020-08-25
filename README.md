@@ -19,13 +19,25 @@ Leight-weight, reusable and heighly customizable tab bar.
 
 ### Usage
 ```swift
+  
+  // Step 1: Create Data for tab bar   
   let tabItems = [TabBarItemViewModel(id: UUID().description, title: "Tab 1", image: UIImage(systemName: "trash"), state: .selected),
                   TabBarItemViewModel(id: UUID().description, title: "Tab 2", image: nil)]
                   
+  // Step 2: Create tab bar
   let tabView = TabBarView(data: TabBarViewModel(items: tabItems)) { selectedItem in
     // on item selected
     print(selectedItem)
   }
+  
+  // Step 3: Customize (optional)  
+  tabView
+    // apply style on tabView (tab items are placed inside this view)
+    .style(RectStyle())
+    // apply styles on tab item
+    .itemUnselectedStyle(RectStyle())
+    .itemSelectedStyle(CapsuleBorderStyle())
+  
 ```
 
 <br>
