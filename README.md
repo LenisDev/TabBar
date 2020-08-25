@@ -25,7 +25,7 @@ Leight-weight, reusable and heighly customizable tab bar.
                   TabBarItemViewModel(id: UUID().description, title: "Tab 2", image: nil)]
                   
   // Step 2: Create tab bar
-  let tabView = TabBarView(data: TabBarViewModel(items: tabItems)) { selectedItem in
+  let tabView = TabBarView(data: TabBarViewModel(items: tabItems)) { [weak self] (selectedItem) in // always use weak to avoid reference cycle
     // on item selected
     print(selectedItem)
   }
