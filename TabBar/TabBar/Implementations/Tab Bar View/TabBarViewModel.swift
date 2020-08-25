@@ -11,10 +11,10 @@ import Foundation
 /// Data provider for `TabBarView`
 public struct TabBarViewModel: BaseViewModel {
     public var id = UUID()
-    
+
     /// Items to be shown in `TabBarView`
     private(set) var items = [TabBarItemViewModel]()
-    
+
     /// Creates `TabBarViewModel` instance with given data
     /// - Parameter items: data to be shown inside `TabBarView`
     ///
@@ -26,7 +26,7 @@ public struct TabBarViewModel: BaseViewModel {
     ///
     public init(items: [TabBarItemViewModel]) {
         self.items = items
-        
+
         if items.isEmpty {
             fatalError("There should be atleast one item.")
         }
@@ -34,16 +34,16 @@ public struct TabBarViewModel: BaseViewModel {
 }
 
 public extension TabBarViewModel {
-    
+
     /// Item whose state is selected
     var selectedItem: TabBarItemViewModel? {
         return items.first(where: { $0.state == .selected })
     }
-    
+
     /// Changes item's selection state to selected and unselected for all other items
     /// - Parameter item: item to be selected
     mutating func select(item: TabBarItemViewModel) {
-        for (index, _) in items.enumerated() {
+        for index in items.indices {
             if items[index].id == item.id {
                 items[index].state = .selected
             } else {
@@ -51,5 +51,5 @@ public extension TabBarViewModel {
             }
         }
     }
-    
+
 }

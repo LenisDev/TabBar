@@ -8,9 +8,13 @@
 
 import Foundation
 
+/// Data structure used as base for all view models
 public protocol BaseViewModel {
-    
-    associatedtype ID: Equatable
-    var id: ID { get set }
-    
+
+    associatedtype IDEQUATABLE: Equatable
+
+    /// An unique identifire
+    /// - Used to compare items
+    var id: IDEQUATABLE { get set }
+
 }

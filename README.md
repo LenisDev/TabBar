@@ -3,6 +3,45 @@
 [![License](https://img.shields.io/github/license/LenisDev/TabBar)](https://github.com/LenisDev/TabBar/blob/master/LICENSE)
 [![Release version](https://img.shields.io/cocoapods/v/Tab)](https://github.com/LenisDev/TabBar/releases)
 
+
+- [Overview](#overview)
+- [Usage](#usage)
+- [Installation Guide](#installation-guide)
+- [Full Documentation](https://lenisdev.github.io/TabBar/index.html)
+- [Contribute](#contribute)
+
+<br>
+
+### Overview
+Leight-weight, reusable and heighly customizable tab bar.
+
+<br>
+
+### Usage
+```swift
+  
+  // Step 1: Create Data for tab bar   
+  let tabItems = [TabBarItemViewModel(id: UUID().description, title: "Tab 1", image: UIImage(systemName: "trash"), state: .selected),
+                  TabBarItemViewModel(id: UUID().description, title: "Tab 2", image: nil)]
+                  
+  // Step 2: Create tab bar
+  let tabView = TabBarView(data: TabBarViewModel(items: tabItems)) { [weak self] (selectedItem) in // always use weak to avoid reference cycle
+    // on item selected
+    print(selectedItem)
+  }
+  
+  // Step 3: Customize (optional)  
+  tabView
+    // apply style on tabView (tab items are placed inside this view)
+    .style(RectStyle())
+    // apply styles on tab item
+    .itemUnselectedStyle(RectStyle())
+    .itemSelectedStyle(CapsuleBorderStyle())
+  
+```
+
+<br>
+
 ### Installation Guide
 
 #### Carthage
@@ -46,3 +85,19 @@ run `pod install` from current project directory.
 >pod try Tab
 >```
 >
+
+<br>
+
+#### Swift Package Manager
+```
+dependencies: [
+    .package(url: "https://github.com/LenisDev/TabBar.git", .upToNextMajor(from: "0.0.1"))
+]
+```
+
+<br>
+
+### Contribute
+> - Play around and report bugs
+> - Fix issues and create PR
+> - Add documentations and new features

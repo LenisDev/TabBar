@@ -10,7 +10,6 @@ import UIKit
 
 public typealias SelectedTabItem = (TabBarItemViewModel) -> Void
 
-
 /// Item view shown inside `TabBarView`
 ///
 /// # View visibility
@@ -19,31 +18,44 @@ public typealias SelectedTabItem = (TabBarItemViewModel) -> Void
 /// - Both title label and image view will be shown when title and image are provided
 ///
 public class TabBarItemView: BaseView<TabBarItemViewModel> {
-    
+
+    // MARK: - Properties
     private(set) lazy var titleLbl = UILabel()
     private(set) lazy var imageView = UIImageView()
-    
+
     private(set) lazy var labelImageSV = UIStackView(arrangedSubViews: [],
                                                      spacing: 10,
                                                      axis: .horizontal,
                                                      distribution: .fillProportionally)
-    
+
     private(set) var onTap: SelectedTabItem
-    
+    private(set) var currentStyle: Stylable?
+
+    // MARK: - Draw
+    public override func draw(_ rect: CGRect) {
+        super.draw(rect)
+
+        if let safeStyle = currentStyle {
+            self.style(safeStyle)
+        }
+    }
+
+    // MARK: - Init
     public init(data: TabBarItemViewModel,
                 onTap: @escaping SelectedTabItem) {
-        
+
         self.onTap = onTap
         super.init(data: data)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    // MARK: - Setups
     override func setupViews() {
         super.setupViews()
-        
+
         if data.title == nil {
             self.setupImageViewLblOnly()
         } else if data.image == nil {
@@ -52,57 +64,67 @@ public class TabBarItemView: BaseView<TabBarItemViewModel> {
             // both can not be nil -> view model will not allow
             self.setupTitleLblAndImageView()
         }
-        
+
         self.rootView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTapGesture)))
-        
+
     }
-    
+
     override func setupData() {
         super.setupData()
-        
+
         self.titleLbl.text = data.title
         self.imageView.image = data.image
     }
-    
+
+    // MARK: - Tint color - override
     @discardableResult
     public override func tintColor(_ color: UIColor) -> Self {
         self.titleLbl.textColor = color
         self.imageView.tintColor = color
-        
+
         return self
     }
-    
+
 }
 
 // MARK: - Setups
 extension TabBarItemView {
-    
+
     private func setupTitleLblOnly() {
         titleLbl.textAlignment = .center
         titleLbl.sameSize(as: rootView)
     }
-    
+
     private func setupImageViewLblOnly() {
         imageView.contentMode = .scaleToFill
         imageView.center(to: rootView)
     }
-    
+
     private func setupTitleLblAndImageView() {
         labelImageSV.removeAllArrangedSubviews()
-        
+
         labelImageSV.addArrangedSubview(titleLbl)
         labelImageSV.addArrangedSubview(imageView)
-        
+
         labelImageSV.center(to: rootView)
     }
-    
+
 }
 
 // MARK: - Extend
 extension TabBarItemView {
-    
+
     @objc private func onTapGesture() {
         onTap(self.data)
     }
-    
+
+    @discardableResult
+    public func style(_ style: Stylable) -> Self {
+        super.style(style)
+
+        self.currentStyle = style
+
+        return self
+    }
+
 }
