@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Tab'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.license = 'MIT'
 
   s.summary = 'Easy to use functional tab bar for swift projects.'
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.authors = { 'Manish Pandey' => '' }
   
   s.source = { :git => 'https://github.com/LenisDev/TabBar.git', :tag => s.version }
-  s.documentation_url = 'https://github.com/LenisDev/TabBar'
+  s.documentation_url = 'https://lenisdev.github.io/TabBar/index.html'
 
   s.ios.deployment_target = '10.0'
 

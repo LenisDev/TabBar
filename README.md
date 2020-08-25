@@ -50,7 +50,7 @@ Step 1:
 Add following to your CartFile
 
 ```
-github "LenisDev/TabBar" ~> 0.0.1
+github "LenisDev/TabBar" ~> 0.0.2
 ```
 
 Step 2:
@@ -63,11 +63,11 @@ run `carthage update` from current project directory.
 #### CocoaPods
 
 Step 1:
-Add `pod 'Tab', '~> 0.0.1'` to your Podfile:
+Add `pod 'Tab', '~> 0.0.2'` to your Podfile:
 
 ```
 target 'MyApp' do
-  pod 'Tab', '~> 0.0.1'
+  pod 'Tab', '~> 0.0.2'
 end
 ```
 
@@ -91,7 +91,7 @@ run `pod install` from current project directory.
 #### Swift Package Manager
 ```
 dependencies: [
-    .package(url: "https://github.com/LenisDev/TabBar.git", .upToNextMajor(from: "0.0.1"))
+    .package(url: "https://github.com/LenisDev/TabBar.git", .upToNextMajor(from: "0.0.2"))
 ]
 ```
 
