@@ -1,7 +1,10 @@
 ![Minimal, yet higly customizable](/Logo.png "TabBar - Project Logo")
 
-[![License](https://img.shields.io/github/license/LenisDev/TabBar)](https://github.com/LenisDev/TabBar/blob/master/LICENSE)
-[![Release version](https://img.shields.io/cocoapods/v/Tab)](https://github.com/LenisDev/TabBar/releases)
+[![License MIT](https://img.shields.io/github/license/LenisDev/TabBar)](https://github.com/LenisDev/TabBar/blob/master/LICENSE)
+![CI Tests](https://github.com/LenisDev/TabBar/workflows/GHActionCI/badge.svg)
+![Carthage compatibility](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat")
+[![pod](https://img.shields.io/cocoapods/v/Tab)](https://github.com/LenisDev/TabBar/releases)
+![Plateform compatibility](https://img.shields.io/cocoapods/p/Tab)
 
 
 - [Overview](#overview)
