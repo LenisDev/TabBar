@@ -15,6 +15,30 @@
 ### Overview
 Leight-weight, reusable and heighly customizable tab bar.
 
+- Simple icons
+
+![TabBar_highlight](./assets/TabBar_highlight.png)
+
+- Selected with Border style
+
+![TabBar_highlight](./assets/TabBar_Line.png)
+
+- Selected with Circle style
+
+![TabBar_highlight](./assets/TabBar_circle.png)
+
+- Text with capsule style
+
+![TabBar_highlight](./assets/TabBar_title_rect.png)
+
+- Text and Icon
+
+![TabBar_highlight](./assets/TabBar_titleIcon.png)
+
+- Text and Icon with capsule style
+
+![TabBar_highlight](./assets/TabBar_titleIcon_rect.png)
+
 <br>
 
 ### Usage
