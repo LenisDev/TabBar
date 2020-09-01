@@ -39,6 +39,7 @@ Leight-weight, reusable and heighly customizable tab bar.
 
 ![TabBar_highlight](./assets/TabBar_titleIcon_rect.png)
 
+Checkout [Example Project](https://github.com/LenisDev/TabBar/tree/master/Examples/TabBarExamples/TabBarExamples)
 <br>
 
 ### Usage
