@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
 
     /// Helper function for adding corner radius to current view using given parameter values
     /// - Parameters:

@@ -11,11 +11,11 @@ import TabBar
 
 struct CapsuleBorderStyle: Stylable {
 
-    var bgColor: UIColor { .white }
+    var bgColor: UIColor { .lightGray }
 
-    var tintColor: UIColor { .black }
+    var tintColor: UIColor { .systemRed }
 
-    var border: Border { Border(color: .red, width: 2, edges: [.all]) }
+    var border: Border { Border(color: .systemRed, width: 1, edges: [.all]) }
 
     var radius: Radius { Radius(size: tabBarRadius, corners: [.allCorners]) }
 

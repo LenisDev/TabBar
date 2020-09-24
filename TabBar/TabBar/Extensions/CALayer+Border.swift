@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension CALayer {
+extension CALayer {
 
     /// Helper function for adding border on current view using given values.
     /// - Parameters:

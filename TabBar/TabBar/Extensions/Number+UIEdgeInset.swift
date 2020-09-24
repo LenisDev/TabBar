@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension Int {
+extension Int {
 
     /// returns `UIEdgeInsets` by making all sides same as current value
     var uiEdgeInsets: UIEdgeInsets {
@@ -22,7 +22,7 @@ public extension Int {
 
 }
 
-public extension CGFloat {
+extension CGFloat {
 
     /// returns `UIEdgeInsets` by making all sides same as current value
     var uiEdgeInsets: UIEdgeInsets {

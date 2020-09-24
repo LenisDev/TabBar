@@ -28,8 +28,11 @@ let tabBarItemTitleOnly = [TabBarItemViewModel(id: UUID().description,
 
 let tabBarItemImageOnly = [TabBarItemViewModel(id: UUID().description,
                                                 title: nil,
-                                                image: UIImage(systemName: "trash"),
+                                                image: UIImage(systemName: "square.grid.2x2"),
                                                 state: .selected),
+                           TabBarItemViewModel(id: UUID().description,
+                                               title: nil,
+                                               image: UIImage(systemName: "trash")),
                             TabBarItemViewModel(id: UUID().description,
                                                 title: nil,
                                                 image: UIImage(systemName: "paperplane"))]

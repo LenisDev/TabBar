@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIStackView {
+extension UIStackView {
 
     /// Creates stack view with given parameter values.
     /// 
@@ -35,7 +35,7 @@ public extension UIStackView {
 
 }
 
-public extension UIStackView {
+extension UIStackView {
 
     /// Removes all subviews from stackview
     func removeAllArrangedSubviews() {

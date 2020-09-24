@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIView {
+extension UIView {
 
     /// Adds current view to `parentView`
     /// - Parameter parentView: Where current view should be added.
@@ -58,7 +58,7 @@ public extension UIView {
 
 }
 
-public extension UIView {
+extension UIView {
 
     /// Adds width and height on current view
     /// - Parameters:

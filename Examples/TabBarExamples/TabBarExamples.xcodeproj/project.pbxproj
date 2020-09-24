@@ -19,6 +19,7 @@
 		133292C224F282B100343AE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133292C024F282B100343AE4 /* LaunchScreen.storyboard */; };
 		133292CC24F2835D00343AE4 /* TabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133292CB24F2835D00343AE4 /* TabBar.framework */; };
 		133292CD24F2835D00343AE4 /* TabBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 133292CB24F2835D00343AE4 /* TabBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		13F3D496251003DD002AB18D /* CapsuleRootStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F3D495251003DD002AB18D /* CapsuleRootStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		133292C124F282B100343AE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		133292C324F282B100343AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		133292CB24F2835D00343AE4 /* TabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F3D495251003DD002AB18D /* CapsuleRootStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleRootStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				1308316124F438650082D003 /* CapsuleBorderStyle.swift */,
 				1308315F24F437AF0082D003 /* RectBorderStyle.swift */,
 				1308315824F42DE10082D003 /* RectStyle.swift */,
+				13F3D495251003DD002AB18D /* CapsuleRootStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				1308315724F42D2F0082D003 /* RectBottomBorderStyle.swift in Sources */,
 				1308315E24F42F3C0082D003 /* SizeConstants.swift in Sources */,
 				1308316024F437AF0082D003 /* RectBorderStyle.swift in Sources */,
+				13F3D496251003DD002AB18D /* CapsuleRootStyle.swift in Sources */,
 				1308315924F42DE10082D003 /* RectStyle.swift in Sources */,
 				133292BA24F282B000343AE4 /* RootViewController.swift in Sources */,
 				133292B624F282B000343AE4 /* AppDelegate.swift in Sources */,

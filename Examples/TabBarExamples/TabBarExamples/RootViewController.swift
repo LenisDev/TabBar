@@ -11,23 +11,23 @@ import TabBar
 
 class RootViewController: UIViewController {
 
-    let tabView = TabBarView(data: TabBarViewModel(items: tabBarItemTitleImage)) { selectedItem in
+    let tabView = TabBarView(data: TabBarViewModel(items: tabBarItemImageOnly)) { selectedItem in
         print(selectedItem)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .yellow
+        self.view.backgroundColor = .lightGray
 
-        tabView
-            .center(to: self.view)
-            .with(width: 350)
+        //tabView
+            //.center(to: self.view)
+            //.with(width: 350)
 
         tabView
             .style(RectStyle())
             .itemUnselectedStyle(RectStyle())
-            .itemSelectedStyle(CapsuleBorderStyle())
+            .itemSelectedStyle(RectBottomBorderStyle())
             //.itemSelectedStyle(RectBorderStyle())
             //.itemSelectedStyle(RectBottomBorderStyle())
 
